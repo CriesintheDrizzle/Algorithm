@@ -13,7 +13,7 @@ void mergesort(int num[], int l, int r) {
 	int mid = (l + r) >> 1;
 	mergesort(num, l, mid); mergesort(num, mid + 1, r);
 
-	// 归并
+	// 褰掑苟
 	int k = 0, i = l, j = mid + 1;
 	while (i <= mid && j <= r) {
 		if (num[i] <= num[j]) tmp[k++] = num[i++];
@@ -23,7 +23,7 @@ void mergesort(int num[], int l, int r) {
 	while (i <= mid) tmp[k++] = num[i++];
 	while (j <= r) tmp[k++] = num[j++];
 
-	// 复制回原数组
+	// 澶嶅埗鍥炲師鏁扮粍
 	for (int i = l, j = 0; i <= r; i++, j++) {
 		num[i] = tmp[j];
 	}
